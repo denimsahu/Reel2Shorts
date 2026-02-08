@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environments
+venv/
+.env/
+
+# OAuth / Secrets
+secreat_keys/
+secreat_keys_credentials/
+client_secreat_keys
+
+# Downloads / Runtime data
+Downloads/
+testing.py
+experiment.py
+# Logs (if any added later)
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db

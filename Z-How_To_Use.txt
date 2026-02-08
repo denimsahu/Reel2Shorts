@@ -1,0 +1,28 @@
+How to Setup this script
+First open all .py files ie(main, Connector, download and upload py files) and download and import all required libraries
+Open download.py file and on line no 21 i.e. 'loader.login("username", "password")' in this line replace "username" with username of your own dummy instagram account and replace "password" with that dummy account password (please use dummy account bec there are chnaces of account getting banned).
+Provide 5 username of instagram account that you want to upload reels of if using Developer mode else go with User mode (Currently in beta)
+Go on google cloud console login with your gmail account and agree and continue with T&C
+now tap on create project then again click on create keeping default project name dont worry about its not important
+now it will take some time to create project and once done you will get a screen which mentions stuff like API Keys, OAuth 2.0 Client IDs, Service Accounts
+now on the left click on library and scroll down and select "Youtube Data Api v3"
+tap on enable wait for it to enable it'll take some time
+once done on the left tap on "OAuth const screen" and then select "External" and tap on "Create"
+now in "App Name" field fill in whatever you like and in "Support Email" enter email of the account which you used on google cloud console, scroll down and in "Developer contact information " fill in same email again and just leave rest of the fileds blank and tap on save and continue
+now scope is the most important part tap on "ADD OR REMOVE SCOPE" and you will get a sliding window on the right now in that window tap on "API (upward arrow)" and then from new filed which will appear down below check mark on fields which scope is ".../auth/youtube.readonly" And ".../auth/youtube.upload",
+so in total you got 2 fields select now scroll down and tap on "update", and now scroll a bit and tap on "Save and continue"
+now in "Test Users" section tap on add users and insert email and tap on "add" twice, this email should be of your youtube account from which you want to upload video on youtube, you can add more than one email, Once done adding all emails tap on "Save And Continue"
+now once again on the left tap on "Credentials" and then on the top tap on "Create Credentials" click on "OAuth Client ID" now tap on "Application Type" field and select "Desktop App" and then tap on "CREATE"
+now you will get a card like thing which says "OAuth client created" in that tap on "Download JSON"
+now move that downloaded JSON file to this project "secreat_keys" directory
+now copy that JSON file name and open "client_secreat_keys" file of this project and past that file name on 2nd line
+(if this is your file json file and if youre adding more secreat keys json files you can just past there name after 2nd line and so on dont leave any line blank)
+now after ".com" at end of copied file name add ".json" example("...jg19e8gg26onii79ekh1mqn47j.apps.googleusercontent.com.json")
+now run the main file and tap on whatever mode you want to go with
+now if you went with User mode and how many instagram user reels you wished to download it will download them and if you went with "Developer mode" then by default program will download reels of 5 instagram users
+once done downloading all specified number users reels it start the process of uploading the reels and here we still go few last things to set up follow along
+now since json file is new and program doesnt have its credentials saved it will redirect you to a link on the web brower
+now here it will show you all google accounts that youre sign in with select one from which you want to upload video on youtube and be sure that you add this gmail account while adding test users when configuring const screen
+tap on "Continue" and then check mark "Select all" and then tap on "Continue", now just close or minimize the web browser.
+vola!! your first video just got uploaded,  it will upload a new video every 2 hours, you can chnage this time by going into "upload.py" and changing "time.sleep(7200)" on line 242 to "time.sleep('time in seconds')"
+!!!!!ENJOY!!!!
